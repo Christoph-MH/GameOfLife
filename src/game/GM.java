@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 class XY {
-    int x, y;
-    boolean b;
+    public int x, y;
+    public boolean b;
 
     public XY(int x, int y, boolean b) {
         this.x = x;
@@ -20,9 +20,9 @@ public class GM {
     public static final int CellCountW = 1242;
     public static final int CellCountH = 662;
     public static boolean[][] cells = new boolean[CellCountW][CellCountH];
-    public static List<XY> changes = new ArrayList<>(); // Liste mit den Änderungen für die nächste Generation
-    static int gen = 0;
-    int startCells = 30_000;
+    private static List<XY> changes = new ArrayList<>(); // Liste mit den Änderungen für die nächste Generation
+    public static int gen = 0;
+    private final int startCells = 30_000;
 
     public static void nextGen() {
         gen++;
