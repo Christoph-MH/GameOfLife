@@ -10,10 +10,15 @@ public class Gui {
     JFrame jf;
 
     public void create() {
+        // Window title
         jf = new JFrame("Game of Life");
+        // Window size
         jf.setSize(1280, 720);
+        // Close button action "exit"
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // Window localisation center
         jf.setLocationRelativeTo(null);
+        // Window unmoveable
         jf.setResizable(false);
 
         d = new Draw();
